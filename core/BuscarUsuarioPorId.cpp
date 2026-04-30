@@ -1,23 +1,9 @@
 #include<iostream>
 #include <string>
+#include <header.hpp>
 
 using namespace std;
 
-struct Usuario {
-string username;
-string email;
-int id;
-int seguidores;
-bool ativo; // true = conta ativa, false = conta suspensa
-};
-
-struct Post {
-string conteudo; // texto do post
-int id;
-int idAutor; // id do Usuario que criou o post
-int curtidas;
-bool publico; // true = vis´ıvel para todos, false = apenas seguidores
-};
 
 Usuario* buscarUsuarioporId(Usuario* v, int n, int id) {
     for(int i=0;i<n;i++) {
@@ -25,11 +11,16 @@ Usuario* buscarUsuarioporId(Usuario* v, int n, int id) {
         return &v[i];
     } return nullptr;
 }
+
+void Search(Usuario* users, int nUsers, int userID) {
     
-Usuario* usuarioEncontrado = buscarUsuarioporId(users, 2, x);
+Usuario* usuarioEncontrado = buscarUsuarioporId(users, nUsers, userID); // Exemplo: buscando o usuário com id 2
+
 if(usuarioEncontrado != nullptr) {
     cout << "Usuario encontrado: " << endl;
     exibirUsuarios(usuarioEncontrado, 1);
 } else {
      cout << "Usuario nao encontrado." << endl;
+}   
+
 }
