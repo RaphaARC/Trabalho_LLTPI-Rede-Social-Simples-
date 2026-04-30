@@ -1,6 +1,6 @@
 #include<iostream>
 #include <string>
-#include <header.hpp>
+#include "../header.hpp"
 
 using namespace std;
 
@@ -12,9 +12,15 @@ Usuario* buscarUsuarioporId(Usuario* v, int n, int id) {
     } return nullptr;
 }
 
-void Search(Usuario* users, int nUsers, int userID) {
+const Usuario* Search(const Usuario* users, int nUsers, int userID) {
     
-Usuario* usuarioEncontrado = buscarUsuarioporId(users, nUsers, userID); // Exemplo: buscando o usuário com id 2
+const Usuario* usuarioEncontrado = nullptr;
+for(int i=0; i<nUsers; i++) {
+    if(users[i].id == userID) {
+        usuarioEncontrado = &users[i];
+        break;
+    }
+}
 
 if(usuarioEncontrado != nullptr) {
     cout << "Usuario encontrado: " << endl;
