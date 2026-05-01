@@ -10,10 +10,10 @@ void lerPosts(Post* v, int p, const Usuario* usuarios, int n) {
 		cout << "-- Post " << i+1 << " --\n";
 		
         cout << "ID Autor: ";
-        int id;
+        int idAutor;
         while(1) {
-        	cin >> id;
-        	const Usuario* userEncontrado = Search(usuarios, n, id);
+        	cin >> idAutor;
+        	const Usuario* userEncontrado = Search(usuarios, n, idAutor);
         	
         	if(userEncontrado == nullptr) {
         		cout << "Usuario inexistente. Digite novamente um ID valido: ";
@@ -27,7 +27,7 @@ void lerPosts(Post* v, int p, const Usuario* usuarios, int n) {
 			
 			break;
         }
-        (v+i)->idAutor = id;
+        (v+i)->idAutor = idAutor;
         
         cout << "Conteudo: ";
         cin.ignore();
@@ -40,6 +40,8 @@ void lerPosts(Post* v, int p, const Usuario* usuarios, int n) {
         int visibilidade;
         cin >> visibilidade;
         (v+i)->publico = (visibilidade == 1);
+        
+        (v+i)->id = i+1;
         
         cout << "\n";
     }
