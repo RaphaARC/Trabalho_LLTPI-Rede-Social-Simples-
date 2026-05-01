@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-#include "../header.hpp"
+#include "../include/header.hpp"
 
 using namespace std;
 void lerPosts(Post* v, int p, const Usuario* usuarios, int n) {
