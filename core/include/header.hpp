@@ -37,5 +37,6 @@ struct Post {
 
 void lerPosts(Post* v, int n, const Usuario* users, int nUsers);
 void exibirPosts(const Post* v, int n, const Usuario* users, int nUsers);
+Post* buscarPostPorId(Post* v, int p, int id);
 
 #endif // HEADER_HPP
