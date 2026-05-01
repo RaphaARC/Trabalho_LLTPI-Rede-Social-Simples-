@@ -22,6 +22,10 @@ entre dados e garantindo consistência.
 - Matriz usuário × post para controle de interações
 - Busca por ID
 
+## 🚀 Compilação
+</> Terminal
+$ g++ core/main/main.cpp core/src/*.cpp assets/icon.res -o EchoFeed.exe -static -static-libgcc -static-libstdc++
+
 ## 🧩 Conceitos aplicados
 - Ponteiros e aritmética de ponteiros
 - Alocação dinâmica (new / delete)
