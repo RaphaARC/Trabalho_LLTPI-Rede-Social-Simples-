@@ -1,4 +1,4 @@
-## 📌 EchoFeed – Social Feed Simulator in C++
+## 📌 EchoFeed – Simulação de Feed Social em C++
 Simulação de um backend de rede social em C++, executado via terminal, com foco em ponteiros e gerenciamento manual de memória.
 
 ## 📚 Contexto e aprendizados
