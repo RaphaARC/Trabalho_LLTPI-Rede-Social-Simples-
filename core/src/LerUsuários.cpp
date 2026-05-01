@@ -4,7 +4,6 @@
 
 using namespace std;
 
-
 void lerUsuarios(Usuario* v, int n){
 
     cout << "=== LENDO USUARIOS ===\n\n";
@@ -17,7 +16,6 @@ void lerUsuarios(Usuario* v, int n){
         getline(cin, (v+i)->username);
 
         cout << "Email: ";
-        cin.ignore();
         getline(cin, (v+i)->email);
         
         cout << "Seguidores: ";
