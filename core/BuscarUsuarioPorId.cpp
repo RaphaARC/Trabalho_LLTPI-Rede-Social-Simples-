@@ -14,19 +14,21 @@ Usuario* buscarUsuarioporId(Usuario* v, int n, int id) {
 
 const Usuario* Search(const Usuario* users, int nUsers, int userID) {
     
-const Usuario* usuarioEncontrado = nullptr;
-for(int i=0; i<nUsers; i++) {
-    if(users[i].id == userID) {
-        usuarioEncontrado = &users[i];
-        break;
-    }
-}
-
-if(usuarioEncontrado != nullptr) {
-    cout << "Usuario encontrado: " << endl;
-    exibirUsuarios(usuarioEncontrado, 1);
-} else {
-     cout << "Usuario nao encontrado." << endl;
-}   
+	const Usuario* usuarioEncontrado = nullptr;
+	for(int i=0; i<nUsers; i++) {
+	    if(users[i].id == userID) {
+	        usuarioEncontrado = &users[i];
+	        break;
+	    }
+	}
+	
+	if(usuarioEncontrado != nullptr) {
+	    cout << "Usuario encontrado: " << endl;
+	    exibirUsuarios(usuarioEncontrado, 1);
+	} else {
+	     cout << "Usuario nao encontrado." << endl;
+	}   
+	
+	return usuarioEncontrado;
 
 }
