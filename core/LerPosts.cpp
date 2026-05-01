@@ -11,15 +11,21 @@ void lerPosts(Post* v, int p, const Usuario* usuarios, int n) {
 		
         cout << "ID Autor: ";
         int id;
-        const Usuario *userEncontrado = nullptr;
         while(1) {
         	cin >> id;
-        	userEncontrado = Search(usuarios, n, id);
+        	const Usuario* userEncontrado = Search(usuarios, n, id);
         	
-        	if(userEncontrado != nullptr) 
-        		break;
-			else
-				cout << "Digite novamente um ID de autor valido: ";
+        	if(userEncontrado == nullptr) {
+        		cout << "Usuario inexistente. Digite novamente um ID valido: ";
+				continue;
+			}
+			
+			if(userEncontrado->ativo == 0) {
+				cout << "Usuario inativo. Digite novamente um ID valido: ";
+				continue;
+			}
+			
+			break;
         }
         (v+i)->idAutor = id;
         
