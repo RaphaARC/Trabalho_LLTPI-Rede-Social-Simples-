@@ -13,7 +13,7 @@ int x;
 	cout << "Digite o id do ususario que gostaria de reativar abaixo: " << endl; 
 	cin >> x; 
 	
-		Usuario* usuarioEncontrado = buscarUsuarioporId(u, nUsers, x); 
+		Usuario* usuarioEncontrado = buscarUsuarioporId(u, nUsers, x); //nUsers precisa se tornar uma variável global para ser usada nesse parâmetro
 	
 	if(usuarioEncontrado != nullptr){
 		cout << "\n\n==Usuario encontrado== \n" << endl; 
