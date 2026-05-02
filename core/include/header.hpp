@@ -39,5 +39,7 @@ void lerPosts(Post* v, int n, const Usuario* users, int nUsers);
 void exibirPosts(const Post* v, int n, const Usuario* users, int nUsers);
 Post* buscarPostPorId(Post* v, int p, int id);
 int contarPostsDeUsuario(const Post* v, int p, int idUsuario);
+void publicarPost(Post* p);
+void ocultarPost(Post* p);
 
 #endif // HEADER_HPP
