@@ -5,7 +5,7 @@
 using namespace std;
 void lerPosts(Post* v, int p, const Usuario* usuarios, int n) {
 	cout << "=== LENDO POSTS ===\n\n";
-    for(int i=0;i<n;i++){
+    for(int i=0;i<p;i++){
 		
 		cout << "-- Post " << i+1 << " --\n";
 		
