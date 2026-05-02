@@ -7,7 +7,7 @@ using namespace std;
 int main(){
     SetConsoleTitle("EchoFeed");
 
-	//Inicialização do Sistema
+//Inicialização do Sistema
     int nUsers;
     int nPosts;
 
@@ -49,7 +49,11 @@ int main(){
 		cout << "-> O usuario de id [" << idUser << "] e inexistente.";
 	}
 	
-	cout << endl;
+	if(userEncontrado != nullptr) {
+	cout << "Quantidade de posts do usuario [" << idUser << "]: " << contarPostsDeUsuario(posts, nPosts, idUser);
+	}
+	
+	cout << endl << endl << endl;
 	
 	// Busca de Post
 	cout << "=== BUSCA DE POST ===\n\n";
