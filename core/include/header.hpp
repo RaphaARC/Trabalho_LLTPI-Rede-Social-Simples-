@@ -20,8 +20,8 @@ void lerUsuarios(Usuario* v, int n);
 void exibirUsuarios(const Usuario* v, int n);
 Usuario* buscarUsuarioporId(Usuario* v, int n, int id);
 const Usuario* Search(const Usuario* users, int nUsers, int userID);
-void reativarUsuario(Usuario* u, int nUsers);
-void suspenderUsuario(Usuario* u, int nUsers);
+void reativarUsuario(Usuario* u);
+void suspenderUsuario(Usuario* u);
 
 // =======================
 // 📝 POSTS
