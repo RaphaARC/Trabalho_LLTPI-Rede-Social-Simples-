@@ -4,10 +4,11 @@
 #include "../include/header.hpp"
 
 using namespace std;
+
 int main(){
     SetConsoleTitle("EchoFeed");
 
-//Inicialização do Sistema
+	//Inicialização do Sistema
     int nUsers;
     int nPosts;
 
@@ -55,6 +56,25 @@ int main(){
 	
 	cout << endl << endl << endl;
 	
+	// Suspender Usuário
+	cout << "Digite um id de usuário para suspender: ";
+    cin >> idUser;
+
+    userEncontrado = buscarUsuarioporId(users, nUsers, idUser);
+	suspenderUsuario(userEncontrado);
+	exibirUsuarios(userEncontrado, 1);
+	cout << "\n\n\n";
+	
+	// Reativar Usuário
+	cout << "Digite um id de usuário para reativar: ";
+    cin >> idUser;
+
+    userEncontrado = buscarUsuarioporId(users, nUsers, idUser);
+	reativarUsuario(userEncontrado);
+	exibirUsuarios(userEncontrado, 1);
+	cout << "\n\n\n";
+	
+	
 	// Busca de Post
 	cout << "=== BUSCA DE POST ===\n\n";
     cout << "Digite um id de post para buscar: ";
@@ -67,11 +87,34 @@ int main(){
     	cout << "-> Post encontrado!\n-> ";
 		exibirPosts(postEncontrado, 1, users, nUsers);
 	} else {
-		cout << "-> O post de id [" << idPost << "] e inexistente.";
+		cout << "-> O post de id [" << idPost << "] e inexistente.\n\n\n";
 	}
+	
+	// Ocultar post.
+	cout << "=== MUDANCA DE STATUS DE POST ===\n\n";
+	cout << "Digite um id de post para ocultar: ";
+    cin >> idPost;
+    
+    postEncontrado = buscarPostPorId(posts, nPosts, idPost);
+    
+    ocultarPost(postEncontrado);
+    
+    cout << endl;
+    
+    // Puplicaar post.
+	cout << "Digite um id de post para publicar: ";
+    cin >> idPost;
+    
+    postEncontrado = buscarPostPorId(posts, nPosts, idPost);
+    
+    publicarPost(postEncontrado);
 
 	cout << endl << endl;
 	
+	cout << "\n=== EXIBINDO POSTS ===\n\n";
+    exibirPosts(posts, nPosts, users, nUsers);
+	
+	// Fim
 	delete[] users;
 	users = nullptr;
     delete[] posts;
