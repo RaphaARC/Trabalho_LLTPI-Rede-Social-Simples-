@@ -41,5 +41,11 @@ Post* buscarPostPorId(Post* v, int p, int id);
 int contarPostsDeUsuario(const Post* v, int p, int idUsuario);
 void publicarPost(Post* p);
 void ocultarPost(Post* p);
+Post* filtrarPublicos(const Post* v, int p, int* qtd);
+
+int** criarMatriz(int linhas, int colunas);
+void exibirMatriz(int** m, int n, int p);
+void registrarCurtida(int** m, int idUsuario, const Usuario* usuarios, int n, int idPost, Post* posts, int p);
+void liberarMatriz(int**m, int linhas);
 
 #endif // HEADER_HPP
