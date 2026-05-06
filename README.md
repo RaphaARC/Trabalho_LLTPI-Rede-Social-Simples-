@@ -36,7 +36,7 @@ $ g++ core/main/main.cpp core/src/*.cpp assets/icon.res -o EchoFeed.exe -static 
 
 ## 👥 Autores
 
-- RAPHAEL AUGUSTO ROCHA COSTA — Arquitetura geral, interface de menu, integração geral e revisão de código (...)
-- LUIZ FELIPE BRAZ OLIVEIRA — Implementação de usuários e posts, busca de usuário por ID e sistema de curtidas (...)
-- GABRIEL LOPES DE SOUZA NEVES BRASIL — Busca de posts por ID, contagem de posts (por ID e usuário), ocultação e publicação de posts (...)
-- ARTHUR ALVES SANTOS — Sistema de administração dos usuários (usuário suspenso ou não), (...)
+- RAPHAEL AUGUSTO ROCHA COSTA — Arquitetura geral, interface de menu, integração geral, revisão de código e build.
+- LUIZ FELIPE BRAZ OLIVEIRA — Implementação de usuários e posts, busca de usuário por ID e sistema de curtidas. 
+- GABRIEL LOPES DE SOUZA NEVES BRASIL — Busca de posts por ID, contagem de posts (por ID e usuário), ocultação e publicação de posts, sistema de matrizes de cutidas.
+- ARTHUR ALVES SANTOS — Sistema de administração dos usuários (usuário suspenso ou não), filtragem de públicos e interface do menu.
