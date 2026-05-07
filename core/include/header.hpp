@@ -32,7 +32,7 @@ struct Post {
     int id;
     int idAutor; // id do Usuario que criou o post
     int curtidas;
-    bool publico; // true = vis´ıvel para todos, false = apenas seguidores
+    bool publico; // true = visível para todos, false = apenas seguidores
 };
 
 void lerPosts(Post* v, int n, const Usuario* users, int nUsers);
