@@ -234,7 +234,7 @@ int main(){
 			
 			case 11:{
 				// Exibe a matriz de curtidas e a quantidade total
-				cout<<"\n\nA quantidade total de curtidas foi: "; 
+				cout<<"\n\nA quantidade total de curtidas foi:\n\n"; 
 				exibirMatriz(mat, nUsers, nPosts); 
 				cout<< "\n" << endl;
 				
